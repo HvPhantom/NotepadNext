@@ -322,8 +322,8 @@ QString PluginManager::callPluginFunction(const QString &pluginName,
 // ============================================================================
 
 void PluginManager::notifyReady() {
-    for (auto &entry : plugins) {
-        lua_State *L = entry.second->luaState;
+    for (const auto &plugin : plugins) {
+        lua_State *L = plugin->luaState;
         if (!L) continue;
         
         // Вызвать plugin.on('ready') обработчик
@@ -366,8 +366,8 @@ void PluginManager::notifyAfterFileClose(const QString &filename) {
 }
 
 void PluginManager::notifyShutdown() {
-    for (auto &entry : plugins) {
-        lua_State *L = entry.second->luaState;
+    for (const auto &plugin : plugins) {
+        lua_State *L = plugin->luaState;
         if (!L) continue;
         
         lua_getglobal(L, "__plugin_event_shutdown");
@@ -385,8 +385,8 @@ void PluginManager::notifyShutdown() {
 }
 
 void PluginManager::broadcastFileEvent(const QString &eventName, const QString &filename) {
-    for (auto &entry : plugins) {
-        lua_State *L = entry.second->luaState;
+    for (const auto &plugin : plugins) {
+        lua_State *L = plugin->luaState;
         if (!L) continue;
         
         // Вызвать __plugin_event_<eventName>(filename)
@@ -413,8 +413,8 @@ void PluginManager::broadcastFileEvent(const QString &eventName, const QString &
 
 QStringList PluginManager::getLoadedPlugins() const {
     QStringList result;
-    for (const auto &entry : plugins) {
-        result.append(entry.first);
+    for (auto it = plugins.begin(); it != plugins.end(); ++it) {
+        result.append(it.key());
     }
     return result;
 }
