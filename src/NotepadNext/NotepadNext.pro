@@ -66,6 +66,8 @@ SOURCES += \
     ColorPickerDelegate.cpp \
     ComboBoxDelegate.cpp \
     Converter.cpp \
+    PluginManager.cpp \
+    PluginAPI.cpp \
     DebugManager.cpp \
     DefaultDirectoryManager.cpp \
     DockedEditor.cpp \
@@ -147,6 +149,7 @@ HEADERS += \
     ColorPickerDelegate.h \
     ComboBoxDelegate.h \
     Converter.h \
+    PluginManager.h \
     DebugManager.h \
     DefaultDirectoryManager.h \
     DockedEditor.h \

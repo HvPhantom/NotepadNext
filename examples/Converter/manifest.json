@@ -1,0 +1,69 @@
+{
+  "name": "Converter",
+  "version": "1.0.0", 
+  "description": "Text and encoding converter - Base64, Hex, URL encoding, case conversion",
+  "author": "Ported to NotepadNext",
+  "license": "GPL-3.0",
+  "homepage": "https://github.com/dail8859/NotepadNext",
+  "entry": "init.lua",
+  
+  "nnp-compatible-versions": "[0.1.0, 1.0.0]",
+  
+  "commands": [
+    {
+      "id": "converter.base64Encode",
+      "title": "Base64 Encode",
+      "category": "Converter",
+      "keybinding": "ctrl+shift+b"
+    },
+    {
+      "id": "converter.base64Decode",
+      "title": "Base64 Decode",
+      "category": "Converter"
+    },
+    {
+      "id": "converter.hexEncode",
+      "title": "Hex Encode",
+      "category": "Converter"
+    },
+    {
+      "id": "converter.hexDecode",
+      "title": "Hex Decode",
+      "category": "Converter"
+    },
+    {
+      "id": "converter.urlEncode",
+      "title": "URL Encode",
+      "category": "Converter"
+    },
+    {
+      "id": "converter.urlDecode",
+      "title": "URL Decode",
+      "category": "Converter"
+    },
+    {
+      "id": "converter.toUppercase",
+      "title": "To UPPERCASE",
+      "category": "Converter",
+      "keybinding": "ctrl+shift+u"
+    },
+    {
+      "id": "converter.toLowercase",
+      "title": "To lowercase",
+      "category": "Converter",
+      "keybinding": "ctrl+shift+l"
+    },
+    {
+      "id": "converter.swapCase",
+      "title": "Swap Case",
+      "category": "Converter"
+    },
+    {
+      "id": "converter.toCamelCase",
+      "title": "toCamelCase",
+      "category": "Converter"
+    }
+  ],
+  
+  "permissions": ["editor"]
+}

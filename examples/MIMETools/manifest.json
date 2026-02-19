@@ -1,0 +1,47 @@
+{
+  "name": "MIMETools",
+  "version": "1.0.0",
+  "description": "MIME type conversion and email-related text transformations",
+  "author": "Ported to NotepadNext",
+  "license": "GPL-3.0",
+  "homepage": "https://github.com/dail8859/NotepadNext",
+  "entry": "init.lua",
+  
+  "nnp-compatible-versions": "[0.1.0, 1.0.0]",
+  
+  "commands": [
+    {
+      "id": "mimetools.decodeQuotedPrintable",
+      "title": "Decode Quoted-Printable",
+      "category": "MIME",
+      "keybinding": "ctrl+alt+q"
+    },
+    {
+      "id": "mimetools.encodeQuotedPrintable",
+      "title": "Encode Quoted-Printable",
+      "category": "MIME"
+    },
+    {
+      "id": "mimetools.decodeUuencode",
+      "title": "Decode UUencode",
+      "category": "MIME"
+    },
+    {
+      "id": "mimetools.encodeUuencode",
+      "title": "Encode UUencode",
+      "category": "MIME"
+    },
+    {
+      "id": "mimetools.getMIMEType",
+      "title": "Detect MIME Type",
+      "category": "MIME"
+    },
+    {
+      "id": "mimetools.decodeEmailHeaders",
+      "title": "Decode Email Headers",
+      "category": "MIME"
+    }
+  ],
+  
+  "permissions": ["editor", "ui"]
+}

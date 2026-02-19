@@ -1,0 +1,37 @@
+{
+  "name": "NppExport",
+  "version": "1.0.0",
+  "description": "Export editor content to HTML, RTF, LaTeX and other formats",
+  "author": "Ported to NotepadNext",
+  "license": "GPL-3.0",
+  "homepage": "https://github.com/dail8859/NotepadNext",
+  "entry": "init.lua",
+  
+  "nnp-compatible-versions": "[0.1.0, 1.0.0]",
+  
+  "commands": [
+    {
+      "id": "nppexport.toHTML",
+      "title": "Export as HTML",
+      "category": "Export",
+      "keybinding": "ctrl+alt+h"
+    },
+    {
+      "id": "nppexport.toRTF",
+      "title": "Export as RTF",
+      "category": "Export"
+    },
+    {
+      "id": "nppexport.toLaTeX",
+      "title": "Export as LaTeX",
+      "category": "Export"
+    },
+    {
+      "id": "nppexport.toJSON",
+      "title": "Export as JSON",
+      "category": "Export"
+    }
+  ],
+  
+  "permissions": ["editor", "ui", "filesystem.write"]
+}

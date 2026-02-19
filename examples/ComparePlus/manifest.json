@@ -1,0 +1,40 @@
+{
+  "name": "ComparePlus",
+  "version": "1.0.0",
+  "description": "Advanced file/text comparison tool with diff highlighting",
+  "author": "Ported to NotepadNext",
+  "license": "GPL-3.0",
+  "homepage": "https://github.com/dail8859/NotepadNext",
+  "entry": "init.lua",
+  
+  "nnp-compatible-versions": "[0.1.0, 1.0.0]",
+  
+  "commands": [
+    {
+      "id": "compareplus.selectFirst",
+      "title": "Compare: Select First File",
+      "category": "Compare",
+      "keybinding": "ctrl+alt+1"
+    },
+    {
+      "id": "compareplus.selectSecond", 
+      "title": "Compare: Select Second File",
+      "category": "Compare",
+      "keybinding": "ctrl+alt+2"
+    },
+    {
+      "id": "compareplus.compare",
+      "title": "Compare Files",
+      "category": "Compare",
+      "keybinding": "ctrl+alt+3"
+    },
+    {
+      "id": "compareplus.compareSelections",
+      "title": "Compare Selections",
+      "category": "Compare",
+      "keybinding": "ctrl+shift+alt+c"
+    }
+  ],
+  
+  "permissions": ["editor", "ui", "filesystem.read"]
+}

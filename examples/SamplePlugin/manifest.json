@@ -1,0 +1,105 @@
+{
+  "$schema": "https://notepadnext.org/plugin-manifest-schema.json",
+  "$comment": "Шаблон manifest.json для плагина NotepadNext. Расположите этот файл в корневой директории плагина рядом с init.lua",
+  
+  "name": "ExamplePlugin",
+  "version": "1.0.0",
+  "description": "Пример плагина для НotepadNext",
+  "author": "Your Name",
+  "license": "GPL-3.0",
+  "homepage": "https://github.com/yourusername/nnp-example-plugin",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yourusername/nnp-example-plugin.git"
+  },
+  
+  "entry": "init.lua",
+  "main": "init.lua",
+  
+  "nnp-compatible-versions": "[0.1.0, 2.0.0]",
+  
+  "keywords": [
+    "example",
+    "template",
+    "documentation"
+  ],
+  
+  "commands": [
+    {
+      "id": "example.hello",
+      "title": "Say Hello",
+      "category": "Example",
+      "description": "Вывести приветствие в диалоге",
+      "keybinding": "ctrl+shift+h",
+      "icon": "icons/hello.png"
+    },
+    {
+      "id": "example.transform",
+      "title": "Transform Selection",
+      "category": "Example",
+      "description": "Трансформировать выделенный текст",
+      "keybinding": "ctrl+shift+t"
+    }
+  ],
+  
+  "menus": {
+    "Tools": ["example.hello", "example.transform"]
+  },
+  
+  "settings": {
+    "greeting": {
+      "type": "string",
+      "default": "Hello, NotepadNext!",
+      "description": "Текст приветствия"
+    },
+    "enabled": {
+      "type": "boolean",
+      "default": true,
+      "description": "Включен ли плагин"
+    },
+    "logLevel": {
+      "type": "string",
+      "default": "info",
+      "enum": ["debug", "info", "warning", "error"],
+      "description": "Уровень логирования"
+    }
+  },
+  
+  "permissions": [
+    "editor",
+    "filesystem.read",
+    "filesystem.write",
+    "ui",
+    "clipboard"
+  ],
+  
+  "dependencies": [
+    {
+      "name": "somelib",
+      "version": ">=1.0.0",
+      "optional": false
+    }
+  ],
+  
+  "changelog": {
+    "1.0.0": {
+      "date": "2026-02-19",
+      "changes": [
+        "Initial release",
+        "Added basic functionality"
+      ]
+    },
+    "0.1.0": {
+      "date": "2026-02-01",
+      "changes": [
+        "Beta release"
+      ]
+    }
+  },
+  
+  "resources": {
+    "ui": "ui/",
+    "icons": "icons/",
+    "docs": "docs/"
+  }
+}
