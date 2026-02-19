@@ -195,7 +195,7 @@ void PluginManager::unloadPlugin(const QString &pluginName) {
         return;
     }
     
-    auto info = it->second;
+    auto info = it.value();
     
     if (info->luaState) {
         // Сохранить конфиг перед выгрузкой
@@ -216,7 +216,7 @@ void PluginManager::reloadPlugin(const QString &pluginName) {
         return;
     }
     
-    QString path = it->second->path;
+    QString path = it.value()->path;
     unloadPlugin(pluginName);
     loadPlugin(path);
 }
@@ -242,7 +242,7 @@ bool PluginManager::executeCommand(const QString &commandId) {
         return false;
     }
     
-    lua_State *L = it->second->luaState;
+    lua_State *L = it.value()->luaState;
     if (!L) {
         qWarning() << "Plugin Lua state is null:" << pluginName;
         return false;
@@ -279,7 +279,7 @@ QString PluginManager::callPluginFunction(const QString &pluginName,
         return QString();
     }
     
-    lua_State *L = it->second->luaState;
+    lua_State *L = it.value()->luaState;
     if (!L) {
         qWarning() << "Plugin Lua state is null:" << pluginName;
         return QString();
@@ -428,7 +428,7 @@ const PluginInfo *PluginManager::getPluginInfo(const QString &pluginName) const 
     if (it == plugins.end()) {
         return nullptr;
     }
-    return it->second.get();
+    return it.value().get();
 }
 
 QString PluginManager::getPluginVersion(const QString &pluginName) const {
